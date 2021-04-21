@@ -9,40 +9,94 @@
 		<title>VJtronics.com - Alexa Smart Home Action for ESP8266, ESP32</title>
 		<!-- Including jQuery slim and minified via CDN -->
 		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-		<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
 		<!-- Compiled and minified Materialize CSS and JS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<!-- Including Material Icons via Google Fonts -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<!-- <link rel="stylesheet" href="Dashboard-stylesheet.css"> -->
+		<!-- Page specific stylesheet -->
+		<link rel="stylesheet" href="Dashboard-Stylesheet.css">
 	</head>
+
 	<body>
 		<nav>
 			<div class="nav-wrapper deep-purple darken-4">
 				<a href="#" class="brand-logo">Dashboard</a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<!-- <li><a href="#">Log Out</a></li> -->
+					<li>
+						<a href="#">
+							<span class="material-icons">
+								logout
+							</span>
+						</a>
+					</li>
 				</ul>
-				<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+				<a href="#" data-target="mobile-sidenavbar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			</div>
-			<ul id="slide-out" class="sidenav">
+			<ul id="mobile-sidenavbar" class="sidenav">
 				<li>
-					<div class="user-view">
-						<a href="#name"><span class="white-text name">John Doe</span></a>
-						<a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-					</div>
+					<a href="#!" class="waves-effect"><em class="material-icons sidenav-icon"> account_circle </em> Profile </a>
 				</li>
-				<li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-				<li><a href="#!">Second Link</a></li>
 				<li><div class="divider"></div></li>
-				<li><a class="subheader">Subheader</a></li>
-				<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+				<li><a class="subheader">More Options:</a></li>
+				<li><a class="waves-effect" href="#!"><em class="material-icons"> logout </em> Sign Out </a></li>
 			</ul>
 		</nav>
+
+		<section class="row">
+			<div class="col s12 m6">
+				<div class="card horizontal">
+					<div class="card-header">
+						<em class="material-icons theme-colored">vpn_key</em>
+						<span class="card-title">Your API Key</span>
+						<span class="card-subtitle block">Keep it safely. Do not disclose it to prevent unauthorised access.</span>
+					</div>
+					<div class="card-body">
+						<span class="key">RANDOM-KEY</span>
+					</div>
+					<div class="card-action">
+						<a href="#" class="btn waves-effect theme-background-colored">Copy</a>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="card horizontal">
+					<div class="card-header">
+						<em class="material-icons theme-colored">home</em>
+						<span class="card-title">Smart Home Device</span>
+						<span class="card-subtitle block">Devices can be linked with Alexa or Google Home.</span>
+					</div>
+					<div class="card-body">
+						<span class="info">Click on Add to get started.</span>
+					</div>
+					<div class="card-action">
+						<a href="#" class="btn waves-effect theme-background-colored">Add</a>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="card horizontal">
+					<div class="card-header">
+						<em class="material-icons theme-colored">google</em>
+						<span class="card-title">Google Home</span>
+						<span class="card-subtitle block">Your credentials to integrate devices with Google Home.</span>
+					</div>
+					<div class="card-body">
+						<br>
+						<span class="info">Client ID:</span> <span class="key"> UNIQUE-KEY </span> <br>
+						<span class="info">Client Secret:</span> <span class="key"> UNIQUE-SECRET </span>
+					</div>
+					<div class="card-action">
+						<a href="#" class="btn waves-effect theme-background-colored">Add</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
 	</body>
 
 	<script>
+		// Initialising the side navbar (for mobile screens)
 		$(document).ready(function(){
 			$('.sidenav').sidenav();
 		});

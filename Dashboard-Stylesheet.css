@@ -1,0 +1,36 @@
+:root {
+    --theme-color: #311b92;
+}
+
+.theme-colored {
+    color: var(--theme-color);
+}
+
+.theme-background-colored {
+    background-color: var(--theme-color);
+}
+
+.sidenav-icon {
+    vertical-align: bottom;
+}
+
+.material-icons {
+    line-height: unset; 
+}
+
+.card.horizontal {
+    padding: 1em;
+    flex-direction: column;
+}
+
+.block {
+    display: block;
+}
+
+.card-subtitle.block {
+    margin-left: 2em;
+}
+
+.card-body {
+    text-align: center;
+}
