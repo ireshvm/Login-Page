@@ -2,12 +2,21 @@
     --theme-color: #311b92;
 }
 
+::selection {
+    background-color: #3299;
+    color: #fff;
+}
+
 .theme-colored {
     color: var(--theme-color);
 }
 
 .theme-background-colored {
     background-color: var(--theme-color);
+}
+
+nav .brand-logo {
+    padding-left: .5em;
 }
 
 .sidenav-icon {
@@ -33,4 +42,18 @@
 
 .card-body {
     text-align: center;
+    padding: 1em .5em;
+}
+
+.card .material-icons {
+    vertical-align: top;
+}
+
+.modal textarea {
+    resize: vertical;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    min-height: 2em;
+    max-height: 6em;
 }

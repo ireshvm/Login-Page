@@ -39,7 +39,7 @@
 				</li>
 				<li><div class="divider"></div></li>
 				<li><a class="subheader">More Options:</a></li>
-				<li><a class="waves-effect" href="#!"><em class="material-icons"> logout </em> Sign Out </a></li>
+				<li><a class="waves-effect" href="#!"><em class="material-icons sidenav-icon"> logout </em> Sign Out </a></li>
 			</ul>
 		</nav>
 
@@ -70,36 +70,65 @@
 						<span class="info">Click on Add to get started.</span>
 					</div>
 					<div class="card-action">
-						<a href="#" class="btn waves-effect theme-background-colored">Add</a>
+						<button class="btn waves-effect theme-background-colored modal-trigger" data-target="new-device-modal">Add</button>
 					</div>
 				</div>
 			</div>
 			<div class="col s12 m6">
 				<div class="card horizontal">
 					<div class="card-header">
-						<em class="material-icons theme-colored">google</em>
+						<em class="material-icons theme-colored">donut_small</em>
 						<span class="card-title">Google Home</span>
 						<span class="card-subtitle block">Your credentials to integrate devices with Google Home.</span>
 					</div>
 					<div class="card-body">
-						<br>
 						<span class="info">Client ID:</span> <span class="key"> UNIQUE-KEY </span> <br>
 						<span class="info">Client Secret:</span> <span class="key"> UNIQUE-SECRET </span>
 					</div>
 					<div class="card-action">
-						<a href="#" class="btn waves-effect theme-background-colored">Add</a>
+						<a href="#" class="btn waves-effect waves-purple theme-background-colored">Generate New Keys</a>
+						<a href="#" class="btn waves-effect white theme-colored">Save API Keys</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
+		<!-- New Device Form -->
+		<div id="new-device-modal" class="modal">
+			<div class="modal-content">
+				<h4>Add New Device</h4>
+				<p>Please fill the form to continue</p>
+				<form>
+					<label for="name">Device Name</label>
+					<input type="text" name="device" id="name" placeholder="Give your device some unique nick name" required="">
+					<label for="description">Device Description</label>
+					<textarea type="text" name="device-info" id="description" rows="10" placeholder="Briefly describe your device"></textarea>
+					<label for="type">Device Type</label>
+					<div class="input-field">
+						<select name="device-type" id="type" required>
+							<option value="default" selected>Please select the device type</option>
+							<option value="Switch">Switch</option>
+							<option value="Light">Light</option>
+							<option value="Thermostat">Thermostat</option>
+							<option value="Window Shutters">Window Shutters</option>
+							<option value="Television">Television</option>
+							<option value="Speaker">Speaker</option>
+							<option value="Smart Lock">Smart Lock</option>
+							<option value="Projector">Projector</option>
+							<option value="Fan">Fan</option>
+						</select>
+					</div>
+					<!-- <button type="submit">Submit</button> -->
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-close waves-effect waves-teal btn-flat">Cancel</a>
+				<a href="#!" class="modal-close waves-effect waves-teal btn-flat">Done</a>
+			</div>
+		</div>
+
 	</body>
 
-	<script>
-		// Initialising the side navbar (for mobile screens)
-		$(document).ready(function(){
-			$('.sidenav').sidenav();
-		});
-	</script>
+	<script src="Dashboard-Script.js"></script>
 
 </html>
