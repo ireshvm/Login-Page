@@ -1,9 +1,9 @@
 :root {
-    --theme-color: #311b92;
+    --theme-color: teal;
 }
 
 ::selection {
-    background-color: #3299;
+    background-color: #0999;
     color: #fff;
 }
 
@@ -23,7 +23,7 @@ nav .brand-logo {
     vertical-align: bottom;
 }
 
-.material-icons {
+section .material-icons {
     line-height: unset; 
 }
 
