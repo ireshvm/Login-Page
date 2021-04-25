@@ -19,12 +19,14 @@ body {
     background-color: var(--theme-color);
 }
 
-nav .brand-logo {
-    padding-left: .5em;
+@media screen and (min-width:992px) {
+    nav .brand-logo {
+        padding-left: 2em;
+    }
 }
 
-.sidenav-icon {
-    vertical-align: bottom;
+.sidenav-icon, #nav-mobile .material-icons {
+    vertical-align: middle;
 }
 
 section .material-icons {
