@@ -26,7 +26,7 @@ body {
 }
 
 .sidenav-icon, #nav-mobile .material-icons {
-    vertical-align: middle;
+    vertical-align: text-bottom;
 }
 
 section .material-icons {
